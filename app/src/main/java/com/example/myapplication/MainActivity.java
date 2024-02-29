@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
 
-    String[] countries = { "Аргентина", "Бразилия", "Чили", "Колумбия", "Уругвай"};
+    String[] countries = { "Аргентина", "Бразилия", "Чили", "Колумбия", "Уругвай","Я"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,10 @@ public class MainActivity extends ListActivity {
                 case 4:
                     Intent intent5 = new Intent(MainActivity.this, Urugvai.class);
                     startActivity(intent5);
+                    break;
+                case 5:
+                    Intent intent6 = new Intent(MainActivity.this, im.class);
+                    startActivity(intent6);
                     break;
                  }
             Toast.makeText(getApplicationContext(), "Вы выбрали " + parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
